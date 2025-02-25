@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ | DJ Prestige Sound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Foire aux Questions - DJ Prestige Sound">
+  
+  <!-- Import Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Import du CSS -->
+  <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="back-link">← Retour à l'Espace Pro</a>
+      <h1 class="faq-title">❓ Foire aux Questions</h1>
+      <p class="faq-subtitle">Besoin d'aide ? Retrouvez ici les réponses aux questions les plus fréquentes.</p>
+    </div>
+  </header>
+
+  <!-- SECTION FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      
+      <!-- Section Connexion -->
+      <h2 class="faq-category">🔑 Connexion & Accès</h2>
+      <div class="faq-item">
+        <h3 class="faq-question">💾 Comment accéder à mon espace client ?</h3>
+        <p class="faq-answer">Vous devez vous connecter via l'accueil de l'Espace Pro en utilisant vos identifiants.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">🛠 J’ai un problème de connexion, que faire ?</h3>
+        <p class="faq-answer">Cliquez sur "Mot de passe oublié" ou contactez-nous via le formulaire de support.</p>
+      </div>
+
+      <!-- Section Événements -->
+      <h2 class="faq-category">📅 Événements & Prestations</h2>
+      <div class="faq-item">
+        <h3 class="faq-question">📅 Où puis-je voir mes événements à venir ?</h3>
+        <p class="faq-answer">Dans votre espace client, rendez-vous dans la section "Mes Événements" pour voir vos réservations et détails.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">🎵 Puis-je modifier ma playlist après validation ?</h3>
+        <p class="faq-answer">Oui, jusqu'à 7 jours avant l'événement, vous pouvez modifier votre playlist via votre espace client.</p>
+      </div>
+
+      <!-- Section Contact -->
+      <h2 class="faq-category">📩 Contact & Support</h2>
+      <div class="faq-item">
+        <h3 class="faq-question">📩 Comment contacter l’équipe DJ Prestige Sound ?</h3>
+        <p class="faq-answer">Vous pouvez nous envoyer un message via votre espace client ou nous écrire à contact@djprestigesound.com.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2025 DJ Prestige Sound. Tous droits réservés.</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const questions = document.querySelectorAll(".faq-question");
+        questions.forEach(q => {
+            q.addEventListener("click", function() {
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("visible");
+            });
+        });
+    });
+  </script>
+
+</body>
+</html>

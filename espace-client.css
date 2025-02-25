@@ -1,0 +1,269 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Inter', sans-serif;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+/* VARIABLES */
+:root {
+  --color-orange: #FF8C42;
+  --color-orange-light: #FFA564;
+  --color-dark: #111;
+  --color-white: #fff;
+  --shadow-glow: rgba(255, 140, 66, 0.5);
+  --transition-speed: 0.3s;
+}
+
+/* HEADER */
+.site-header {
+  background-color: rgba(17, 17, 17, 0.9);
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  border-bottom: 1px solid var(--color-orange-light);
+}
+.client-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.back-link {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-orange);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* NOTIFICATIONS */
+.notifications {
+  background: rgba(255, 140, 66, 0.2);
+  color: var(--color-orange);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  display: none; /* Affiché dynamiquement */
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* ÉVÉNEMENT */
+.event-card {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0 0 10px rgba(255, 140, 66, 0.3);
+  border: 1px solid var(--color-orange);
+  text-align: left;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 140, 66, 0.5);
+}
+.event-card h2 {
+  color: var(--color-orange-light);
+  margin-bottom: 0.5rem;
+}
+.event-card p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 0.5rem;
+}
+.event-card a {
+  color: var(--color-orange);
+  font-weight: bold;
+  text-decoration: none;
+}
+.event-card a:hover {
+  text-decoration: underline;
+}
+
+/* TIMELINE INTERACTIVE */
+.hidden {
+  display: none;
+}
+.timeline {
+  margin-top: 20px;
+}
+.timeline h3 {
+  cursor: pointer;
+  padding: 10px;
+  background: var(--color-orange);
+  color: var(--color-dark);
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background var(--transition-speed) ease;
+}
+.timeline h3:hover {
+  background: var(--color-orange-light);
+}
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.timeline li {
+  background: var(--color-dark);
+  color: var(--color-orange-light);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* DOCUMENTS */
+.documents {
+  margin-top: 20px;
+}
+.documents h3 {
+  color: var(--color-orange-light);
+  margin-bottom: 0.5rem;
+}
+.documents ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.documents li {
+  padding: 5px 0;
+}
+.documents a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-orange);
+}
+.documents a:hover {
+  text-decoration: underline;
+}
+
+/* COMMENTAIRE */
+.comment-section {
+  margin-top: 20px;
+}
+.comment-section textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color-orange);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  transition: border-color var(--transition-speed) ease;
+}
+.comment-section textarea:focus {
+  outline: none;
+  border-color: var(--color-orange-light);
+}
+
+/* DEMANDE DE MODIFICATION */
+.modify-section {
+  margin-top: 20px;
+}
+.modify-section input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color-orange);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  transition: border-color var(--transition-speed) ease;
+}
+.modify-section input:focus {
+  outline: none;
+  border-color: var(--color-orange-light);
+}
+
+/* NOTES DJ */
+.dj-notes {
+  background: rgba(255, 140, 66, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  color: var(--color-orange-light);
+  font-size: 1rem;
+}
+
+/* STATUT ÉVÉNEMENT */
+.status {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.status.confirmed {
+  background: #28a745;
+  color: #fff;
+}
+.status.pending {
+  background: #ffcc00;
+  color: #222;
+}
+.status.canceled {
+  background: #dc3545;
+  color: #fff;
+}
+
+/* BOUTON AMÉLIORÉ */
+.btn {
+  padding: 12px 25px;
+  background: linear-gradient(45deg, var(--color-orange), var(--color-orange-light));
+  color: #111;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(255, 140, 66, 0.4);
+  transition: transform var(--transition-speed) ease, background var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, var(--color-orange-light), var(--color-orange));
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #000;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-orange);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0;
+  }
+  .event-card {
+    padding: 1rem;
+  }
+  .client-title {
+    font-size: 1.8rem;
+  }
+  .event-card h2 {
+    font-size: 1.3rem;
+  }
+  .event-card p {
+    font-size: 0.9rem;
+  }
+}

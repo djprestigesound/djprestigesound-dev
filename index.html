@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Espace Pro | DJ Prestige Sound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Espace Pro DJ Prestige Sound - Accédez à votre espace dédié pour gérer vos événements et obtenir les informations essentielles.">
+  <link rel="stylesheet" href="index.css">
+  <!-- Font Awesome pour les icônes (optionnel) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Loader animé */
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid var(--color-orange);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader" class="loader"></div>
+
+  <!-- Navbar Start -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="https://djprestigesound.com/" class="navbar-brand">DJ Prestige Sound</a>
+      <button class="navbar-toggler" id="navbar-toggler">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="navbar-menu" id="navbar-menu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="https://djprestigesound.com/" class="nav-link active">Accueil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://djprestigesound.com/services_wedding.html" class="dropdown-item">Mariage</a></li>
+              <li><a href="https://djprestigesound.com/services_dj.html" class="dropdown-item">DJ</a></li>
+              <li><a href="https://djprestigesound.com/services_artists.html" class="dropdown-item">Artistes</a></li>
+              <li><a href="https://djprestigesound.com/services_photograph.html" class="dropdown-item">Photographes</a></li>
+              <li><a href="https://djprestigesound.com/services_nomade.html" class="dropdown-item">Méditation Nomade</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="https://djprestigesound.com/gallery.html" class="nav-link">Galerie</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://djprestigesound.com/contact.html" class="nav-link">Contact</a>
+          </li>
+          <!-- Liens pour visiteurs -->
+          <li class="nav-item">
+            <a href="login.php" class="nav-link">Se connecter</a>
+          </li>
+          <li class="nav-item">
+            <a href="register.php" class="nav-link">Créer un compte</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Espace Pro DJ Prestige Sound</h1>
+    </div>
+  </header>
+
+  <!-- SECTION HÉROS -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">🎧 Bienvenue sur l’Espace Pro</h1>
+      <p class="hero-subtitle">
+        Gérez vos événements, prestations et documents en toute simplicité.<br>
+        Un espace exclusif pour suivre vos projets avec DJ Prestige Sound.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION ESPACE PRO -->
+  <section class="login-section">
+    <div class="container">
+      <div class="login-box" id="clientBox">
+        <h3>🎧 Espace Client</h3>
+        <p>Accédez à votre tableau de bord, gérez vos événements et personnalisez votre playlist.</p>
+        <a href="login.php" class="btn">Accéder à mon espace client</a>
+      </div>
+      <div class="login-box" id="prestataireBox">
+        <h3>🎤 Espace Prestataire</h3>
+        <p>Retrouvez vos plannings, fiches techniques et communiquez avec notre équipe.</p>
+        <a href="login.php" class="btn">Accéder à l’espace prestataire</a>
+      </div>
+      <div class="call-section">
+        <p>📞 Besoin d’aide ?</p>
+        <a href="tel:0494045438" class="btn-call">Appelez-nous au 0494 04 54 38</a>
+      </div>
+      <div class="help-section">
+        <p>❓ Une question ? <a href="https://djprestigesound.com/faq.html">Consultez la FAQ</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 DJ Prestige Sound. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT POUR INTERACTIONS -->
+  <script>
+    // Toggle navbar menu on mobile
+    document.getElementById('navbar-toggler').addEventListener('click', function() {
+      document.getElementById('navbar-menu').classList.toggle('active');
+    });
+
+    // Masquer le loader après chargement complet
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+    });
+
+    // Animation fade-in pour les éléments clés
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".hero-title, .hero-subtitle, .login-box, .call-section, .help-section");
+      elements.forEach(el => {
+          el.style.opacity = 0;
+          el.style.transform = "translateY(20px)";
+          el.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+      });
+      setTimeout(() => {
+          elements.forEach(el => {
+              el.style.opacity = 1;
+              el.style.transform = "translateY(0)";
+          });
+      }, 300);
+    });
+
+    // Exemple de log pour déboguer
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        console.log('Bouton cliqué:', btn.textContent.trim());
+      });
+    });
+  </script>
+</body>
+</html>

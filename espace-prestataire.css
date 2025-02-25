@@ -1,0 +1,149 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Inter', sans-serif;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+/* VARIABLES */
+:root {
+  --color-orange: #FF8C42;
+  --color-orange-light: #FFA564;
+  --color-dark: #111;
+  --color-white: #fff;
+  --shadow-glow: rgba(255, 140, 66, 0.5);
+  --transition-speed: 0.3s;
+}
+
+/* HEADER */
+.site-header {
+  background-color: rgba(17, 17, 17, 0.9);
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  border-bottom: 1px solid var(--color-orange-light);
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* ÉVÉNEMENT */
+.event-card {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0 0 10px rgba(255, 140, 66, 0.3);
+  border: 1px solid var(--color-orange);
+  text-align: left;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 140, 66, 0.5);
+}
+.event-card h2 {
+  color: var(--color-orange-light);
+  margin-bottom: 0.5rem;
+}
+.event-card p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 0.5rem;
+}
+.event-card a {
+  color: var(--color-orange);
+  font-weight: bold;
+  text-decoration: none;
+}
+.event-card a:hover {
+  text-decoration: underline;
+}
+
+/* BOUTONS */
+.btn {
+  padding: 12px 25px;
+  background: linear-gradient(45deg, var(--color-orange), var(--color-orange-light));
+  color: #111;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: transform var(--transition-speed) ease, background var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* SECTION SPÉCIFIQUE AU PRESTATAIRE (TABLEAU DE BORD, TÂCHES, etc.) */
+
+/* En-tête du tableau de bord */
+.dashboard-header {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: var(--color-orange-light);
+  text-shadow: 0 0 10px var(--shadow-glow);
+}
+
+/* Section de tâches/événements assignés */
+.task-section {
+  margin-top: 2rem;
+}
+.task-card {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 15px 0;
+  border: 1px solid var(--color-orange);
+  box-shadow: 0 0 10px rgba(255, 140, 66, 0.3);
+  text-align: left;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+.task-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 140, 66, 0.5);
+}
+.task-card h3 {
+  color: var(--color-orange-light);
+  margin-bottom: 0.5rem;
+}
+.task-card p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0;
+  }
+  .event-card, .task-card {
+    padding: 1rem;
+  }
+  .site-header {
+    font-size: 1.3rem;
+  }
+  .dashboard-header {
+    font-size: 1.6rem;
+  }
+  .event-card h2, .task-card h3 {
+    font-size: 1.3rem;
+  }
+  .event-card p, .task-card p {
+    font-size: 0.9rem;
+  }
+}
